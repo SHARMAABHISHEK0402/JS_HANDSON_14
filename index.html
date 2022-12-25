@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map and Set</title>
+</head>
+<body>
+<h1>Map and Set Handson</h1>
+<hr>
+<h3>Problem:1.</h3>
+<pre>
+    let str="abcadeecfb";
+
+ let setStr= new Set(str);
+ console.log(setStr);
+
+ const uniqueArr=[...setStr];
+ console.log(uniqueArr);
+ let newStr="";
+
+ for (let index = 0; index < uniqueArr.length; index++) {
+     newStr += uniqueArr[index];
+    
+ }
+ console.log("newStr:",newStr)
+</pre>
+<hr>
+<h3>Problem:2.</h3>
+<pre>
+    let str="abcadeecfb"
+ let map= new Map();
+ for(let i=0;i < str.length;i++){
+  if(map.has(str[i])){
+         let value=map.get(str[i]);
+         map.set(str[i],value+1);
+    } 
+    else{     map.set(str[i],1);
+    }
+ }
+
+ for(let [k,v] of map){
+     console.log(k+"-->"+v);
+}
+</pre>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
